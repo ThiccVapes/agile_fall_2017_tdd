@@ -53,4 +53,17 @@ public class Car {
 		// not implemented!
 		return("Color: Red, Speed: 0");
 	}
+
+	public void Deaccelerate(int amount) {
+    speed-= amount;
+  }
+	
+	public void DeaccelerateBelowZero(int amount){
+    int limit = maxSpeed - speed;
+    if(amount <= limit){
+      speed = 0;
+    }else{
+      speed-= amount;
+    }
+ 
 }
