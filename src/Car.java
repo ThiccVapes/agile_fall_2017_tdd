@@ -56,14 +56,10 @@ public class Car {
 
 	public void Deaccelerate(int amount) {
     speed-= amount;
+    if(speed < 0) {
+      speed = 0;
+    }
   }
 	
-	public void DeaccelerateBelowZero(int amount){
-    int limit = maxSpeed - speed;
-    if(amount <= limit){
-      speed = 0;
-    }else{
-      speed-= amount;
-    }
- 
+	
 }
