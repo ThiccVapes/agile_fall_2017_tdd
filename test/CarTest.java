@@ -41,5 +41,10 @@ public class CarTest {
   }
 	
 	// Create and pass test for no deceleration below 0.
-	
+  public void cantDeaccelerateBelowZero(){
+    Car car1 = new Car("Red", 100);
+    car1.accelerate(10);
+    car1.Deaccelerate(15);
+    assertThat(car1.getSpeed(), is(0));
+  }
 }
